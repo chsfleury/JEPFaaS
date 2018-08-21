@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run --rm jep
+docker run --rm -it jep
