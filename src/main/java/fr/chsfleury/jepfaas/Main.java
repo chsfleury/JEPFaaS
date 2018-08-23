@@ -17,7 +17,7 @@ public class Main {
         try {
             log.info("Starting jep");
             Jep jep = new Jep();
-            Path p = Paths.get("/data/script.py");
+            Path p = Paths.get("/data/handler.py");
             try (Stream<String> lines = Files.lines(p)) {
                 lines.forEach(line -> eval(jep, line));
             }

@@ -25,7 +25,7 @@ RUN pip3 install numpy
 ENV JAVA_OPTS  "-Djava.library.path=/usr/local/lib/python3.5/dist-packages/jep"
 
 COPY ./target/jepfaas.jar /data/jepfaas.jar
-COPY ./python/script.py /data/script.py
+COPY ./python/handler.py /data/handler.py
 WORKDIR /data
 
 CMD /usr/bin/java -Djava.library.path=/usr/local/lib/python3.5/dist-packages/jep -jar jepfaas.jar
