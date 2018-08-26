@@ -24,4 +24,4 @@ ENV fprocess="java -Djava.library.path=/usr/local/lib/python3.5/dist-packages/je
 #HEALTHCHECK --interval=2s CMD [ -e /tmp/.lock ] || exit 1
 EXPOSE 8081
 
-CMD java -Djava.library.path=/usr/local/lib/python3.5/dist-packages/jep -jar jepfaas.jar
+CMD java -Djava.library.path='/usr/local/lib/python3.5/dist-packages/jep' -jar jepfaas.jar
