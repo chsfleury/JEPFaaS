@@ -21,7 +21,7 @@ COPY function/handler.py /data/handler.py
 
 ENV upstream_url="http://127.0.0.1:8080"
 ENV mode="http"
-ENV fprocess="/usr/bin/java -Djava.library.path=/usr/local/lib/python3.5/dist-packages/jep -jar jepfaas.jar"
+ENV fprocess="java -jar jepfaas.jar"
 
 HEALTHCHECK --interval=2s CMD [ -e /tmp/.lock ] || exit 1
 
