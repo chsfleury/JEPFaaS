@@ -16,8 +16,8 @@ ENV JAVA_OPTS "-Djava.library.path=/usr/local/lib/python3.5/dist-packages/jep"
 
 WORKDIR /data
 
-COPY ./jepfaas.jar /data/jepfaas.jar
-COPY ./handler.py /data/handler.py
+COPY jepfaas.jar /data/jepfaas.jar
+COPY function/handler.py /data/handler.py
 
 ENV upstream_url="http://127.0.0.1:8080"
 ENV mode="http"
