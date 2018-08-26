@@ -20,7 +20,7 @@ public class EntryPoint {
         final Path pythonScript = Paths.get("/data/handler.py");
         final List<String> pythonScriptLines = Files.readAllLines(pythonScript);
 
-        port(8080);
+        port(8081);
         post("/", (request, response) -> {
             try {
                 Jep jep = new Jep();

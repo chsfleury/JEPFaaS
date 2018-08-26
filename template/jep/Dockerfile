@@ -19,7 +19,7 @@ WORKDIR /data
 COPY jepfaas.jar /data/jepfaas.jar
 COPY function/handler.py /data/handler.py
 
-ENV upstream_url="http://127.0.0.1:8080"
+ENV upstream_url="http://127.0.0.1:8081"
 ENV mode="http"
 ENV fprocess="java -jar jepfaas.jar"
 
