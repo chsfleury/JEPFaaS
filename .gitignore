@@ -127,7 +127,7 @@ fabric.properties
 .mtj.tmp/
 
 # Package Files #
-*.jar
+#*.jar (keep the jar in the openfaas template)
 *.war
 *.ear
 *.zip
