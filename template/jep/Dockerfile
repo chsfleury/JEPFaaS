@@ -12,8 +12,6 @@ RUN apt-get update \
 ENV LD_PRELOAD /usr/lib/x86_64-linux-gnu/libpython3.5m.so.1.0
 
 RUN pip3 install numpy pymc3 six urllib3 pandas requests urllib3 six lxml JPype1==0.6.2 jep baostock bs4 tushare numpy
-ENV JAVA_OPTS "-Djava.library.path=/usr/local/lib/python3.5/dist-packages/jep"
-
 WORKDIR /data
 
 COPY jepfaas.jar /data/jepfaas.jar
@@ -21,7 +19,7 @@ COPY function/handler.py /data/handler.py
 
 ENV upstream_url="http://127.0.0.1:8081"
 ENV mode="http"
-ENV fprocess="java -jar jepfaas.jar"
+ENV fprocess="java -Djava.library.path=/usr/local/lib/python3.5/dist-packages/jep -jar jepfaas.jar"
 
 HEALTHCHECK --interval=2s CMD [ -e /tmp/.lock ] || exit 1
 
