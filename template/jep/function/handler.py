@@ -1,1 +1,2 @@
-responseBody = 'python says: Hello ' + requestBody
+def handle(params):
+    return 'python says: Hello ' + params
