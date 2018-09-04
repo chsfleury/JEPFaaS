@@ -40,3 +40,16 @@ Error Set:
 500 Internal Server Error
 502 Bad Gateway
 ```
+# v2; 3c8g; 8req/s
+```
+echo "POST http://192.168.99.100:31112/function/hello-jep" | vegeta attack -rate=8 -duration=240s | vegeta report
+Requests      [total, rate]            1920, 8.00
+Duration      [total, attack, wait]    3m59.918991419s, 3m59.874930257s, 44.061162ms
+Latencies     [mean, 50, 95, 99, max]  270.437686ms, 50.530437ms, 1.522591056s, 4.790359399s, 8.313771789s
+Bytes In      [total, mean]            36233, 18.87
+Bytes Out     [total, mean]            0, 0.00
+Success       [ratio]                  99.32%
+Status Codes  [code:count]             200:1907  502:13  
+Error Set:
+502 Bad Gateway
+```
